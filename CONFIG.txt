@@ -1,0 +1,8 @@
+shuffle:true
+correct_points:1
+mistake_deduction:1
+clue_deduction:1
+revisit_wrong_answers:false
+revisit_multiple_clues:false
+error_messages:false
+show_answers:false

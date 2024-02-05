@@ -15,9 +15,9 @@ public class Flashcard {
         clues = new ArrayList<String>();
         answers = new ArrayList<String>();
 
-        if( saveline.split(":").length == 2) {
-            String[] clus = saveline.split(":")[0].split(",");
-            String[] ansrs = saveline.split(":")[1].split(",");
+        if( saveline.split(";").length == 2) {
+            String[] clus = saveline.split(";")[0].split(",");
+            String[] ansrs = saveline.split(";")[1].split(",");
             for (int i = 0; i < clus.length; i++ )
                 clues.add(clus[i].strip());
             for (int i = 0; i < ansrs.length; i++)
@@ -80,7 +80,7 @@ public class Flashcard {
 
         for (String s : clues)
             saveline += s + ",";
-        saveline = saveline.substring(0, saveline.length() - 1) + ":";
+        saveline = saveline.substring(0, saveline.length() - 1) + ";";
         for (String s : answers)
             saveline += s + ",";
         saveline = saveline.substring(0, saveline.length() - 1);
